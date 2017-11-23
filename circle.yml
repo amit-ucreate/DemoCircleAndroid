@@ -7,12 +7,9 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Assemble & Test (Amazon Flavour)
-          command: ./gradlew assembleWithAmazon testWithAmazonDebugUnitTest
-          environment:
-            TERM: dumb
+            name: chmod permissions
+            command: chmod +x ./gradlew
       - run:
-          name: Assemble & Test (Google Flavour)
-          command: ./gradlew assembleWithGoogle testWithGoogleDebugUnitTest
-          environment:
-            TERM: dumb
+          name: Download Dependencies
+          command: ./gradlew androidDependencies
+          
