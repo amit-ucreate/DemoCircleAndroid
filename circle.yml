@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: amit-ucreate
+     - image: circleci/android:api-25-alpha
     working_directory: ~/DemoCircleAndroid
     steps:
       - checkout
